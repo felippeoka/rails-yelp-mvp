@@ -28,4 +28,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_12_000415) do
     t.integer "restaurant_id", null: false
     t.index ["restaurant_id"], name: "index_reviews_on_restaurant_id"
   end
+
 end
