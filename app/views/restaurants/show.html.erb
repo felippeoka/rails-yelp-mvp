@@ -1,2 +1,12 @@
-<p><%= @restaurant.find{params[:restaurant_id]} %></p>
-
+<div class="container">
+  <h1>Detalhe do Restaurante: <%= @restaurant.name %></h1>
+  <p><b>Categoria:</b><%= @restaurant.category %></p>
+  <a><b>Numero:</b><%= @restaurant.phone_number %></a>
+  <p><b>Endereço: </b><%= @restaurant.address %></p>
+  <p><b>Reviws: </b><%= @restaurant.review %></p>
+  <%= link_to "Delete",
+  restaurant_path(@restaurant),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+  <%= link_to 'Voltar para lista', restaurants_path %>
+</div>
